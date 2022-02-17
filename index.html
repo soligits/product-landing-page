@@ -7,18 +7,39 @@
   </head>
   <body>
     <header class="header-bar" id="header">
-      <div class="horizontal-flex icon-container">
+      <div class="icon-container">
         <img class="header-icon" id="header-img" src="img/icon.png" alt="header icon">
         <h1 class="title" id="title">Elden Ring</h1>
       </div>
       <nav class="nav-bar" id="nav-bar">
-            <a class="nav-link" href="#">Description</a>
-            <a class="nav-link" href="#">Specs</a>
-            <a class="nav-link" href="#">Offers</a>
-            <a class="nav-link" href="#">Socials</a>
+            <a class="nav-link" href="#description">Description</a>
+            <a class="nav-link" href="#specs">Specs</a>
+            <a class="nav-link" href="#offers">Offers</a>
+            <a class="nav-link" href="#socials">Socials</a>
       </nav>
     </header>
-    <main>
+    <main class="vertical-flex container">
+      <form id="form" class="vertical-flex form container-item" action="https://www.freecodecamp.com/email-submit" method="post">
+        <label id="email-label" class="label-email form-item" for="email">Receive an Elden Ring beta key for free!</label>
+        <input id="email" type="email" class="field-email form-item" required name="email" value="" placeholder="Enter your email">
+        <input class="form-item button-submit" type="submit" name="submit" value="Let's go!">
+      </form>
+      <!-- TODO: finish video embed -->
+      <h2>Check out the new gameplay reveal!</h2>
+      <iframe id="video" class="video-youtube" width="560" height="315" src="https://www.youtube.com/embed/E3Huy2cdih0"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <section id="description" class="description">
+
+      </section>
+      <section id="specs" class="specs">
+
+      </section>
+      <section id="offers" class="offers">
+
+      </section>
+      <section id="socials" class="socials">
+
+      </section>
     </main>
   </body>
 </html>

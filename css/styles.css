@@ -27,7 +27,7 @@ body::before {
   background-size: cover;
 }
 
-.horizontal-flex {
+.icon-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -68,8 +68,8 @@ body::before {
 }
 
 .nav-link {
-  margin: auto 1rem;
-  padding: 1rem 1rem;
+  margin: auto 1vw;
+  padding: 0.5rem;
   border-radius: 4px;
   color: inherit;
   text-decoration: none;
@@ -107,5 +107,99 @@ body::before {
 
   100% {
     background-color: inherit;
+  }
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+}
+
+.container {
+  width: 800px;
+  height: auto;
+  max-width: 100%;
+  margin: 4rem auto;
+  padding: 2.5rem 0;
+  background: linear-gradient(to right, hsl(46, 100%, 50%), hsl(46, 100%, 65%));
+  border-radius: 4px;
+  text-align: center;
+}
+
+.container-item {
+  margin-bottom: 3rem;
+}
+
+.form {
+  margin: 1rem auto 3rem auto;
+  align-content: center;
+}
+
+.form-item {
+  margin: auto auto 1rem auto;
+}
+
+.label-email {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.field-email {
+  font-size: 1rem;
+  padding: 0.8rem 0.6rem;
+}
+
+.button-submit {
+  font-size: 1rem;
+  line-height: inherit;
+  padding: 0 1rem;
+  border-radius: 4px;
+  background-color: green;
+  color: white;
+
+}
+
+.video-youtube {
+  margin: 2rem auto;
+}
+
+@media (max-width:1000px) {
+  .nav-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-link {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 0;
+  }
+
+  .video-youtube {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-bar {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .icon-container {
+    flex-direction: column;
+    margin: 1rem auto;
+  }
+
+  .header-icon {
+      margin-bottom: 1rem;
+  }
+
+  .nav-bar {
+    margin: 1rem auto;
   }
 }
