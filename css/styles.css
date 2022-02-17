@@ -38,7 +38,7 @@ body::before {
   justify-content: space-between;
   align-content: stretch;
   padding: 1.5rem 1rem;
-  background: linear-gradient(to right, hsl(39, 100%, 50%), hsl(39, 100%, 60%));
+  background: linear-gradient(to right, hsl(26, 100%, 50%), hsl(26, 100%, 60%));
 }
 
 .icon-container {
@@ -98,7 +98,7 @@ body::before {
   0% {
     background-color: inherit;
   }
-
+button-special
   100% {
     background-color: hsl(39, 100%, 30%);
   }
@@ -157,7 +157,7 @@ body::before {
   padding: 0.8rem 0.6rem;
 }
 
-.button-submit {
+.button-special {
   font-size: 1rem;
   line-height: inherit;
   padding: 0 1rem;
@@ -241,4 +241,69 @@ p::before {
 
 .list-specs {
   text-align: left;
+}
+
+.offer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offer-item {
+  border-radius: 4px;
+  border-style: double;
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+  width: auto;
+}
+
+.button-image {
+  padding: 0;
+  margin: 1rem 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: transparent;
+  background-size: cover;
+  opacity: 0.6;
+  animation-name: button-image-unhover-animation;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.button-image:hover {
+  animation-name: button-image-hover-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes button-image-hover-animation {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-image-unhover-animation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.button-linkedin {
+  background-image: url("../img/icon-linkedin.png");
+}
+
+.button-twitter {
+  background-image: url("../img/icon-twitter.png");
+}
+
+.button-github {
+  background-image: url("../img/icon-github.png");
 }

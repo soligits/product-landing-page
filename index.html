@@ -22,17 +22,17 @@
       <form id="form" class="vertical-flex form container-item" action="https://www.freecodecamp.com/email-submit" method="post">
         <label id="email-label" class="label-email form-item" for="email">Receive an Elden Ring beta key for free!</label>
         <input id="email" type="email" class="field-email form-item" required name="email" value="" placeholder="Enter your email">
-        <input class="form-item button-submit" type="submit" name="submit" value="Let's go!">
+        <input class="form-item button-special" type="submit" name="submit" value="Let's go!">
       </form>
       <!-- TODO: finish video embed -->
       <h2>Check out the new gameplay reveal!</h2>
       <iframe id="video" class="video-youtube" width="560" height="315" src="https://www.youtube.com/embed/E3Huy2cdih0"
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <section id="description" class="description">
+      <section tabindex="0" id="description" class="description">
         <h2>Description</h2>
         <p>Elden Ring is an upcoming action role-playing developed by FromSoftware and published by Bandai Namco Entertainment. The game, directed by Hidetaka Miyazaki, was made in collaboration with fantasy novelist George R. R. Martin, who provided material for the game's setting. Elden Ring is scheduled to be released for Microsoft Windows, PlayStation 4, PlayStation 5, Xbox One and Xbox Series X/S on February 25, 2022.</p>
       </section>
-      <section id="specs" class="specs">
+      <section tabindex="0" id="specs" class="specs">
         <h2>Minimum Requirements (for PC)</h2>
         <ul class="list-specs">
           <li>
@@ -79,16 +79,45 @@
           </li>
         </ul>
       </section>
-      <section id="offers" class="offers">
+      <section tabindex="0" id="offers" class="offers">
         <h2>Offers</h2>
         <div class="offer-container">
           <div class="offer-item">
-
+            <h3>Normal Edition</h3>
+            <strong>59.99$</strong>
+            <ul>
+              <li>The original game</li>
+              <li>With multiplayer access</li>
+            </ul>
+            <button class="button-special" type="button" name="button">Purchase</button>
+          </div>
+          <div class="offer-item">
+            <h3>Silver Edition</h3>
+            <strong>74.99$</strong>
+            <ul>
+              <li>Extra in game sets</li>
+              <li>+ 5 playable classes</li>
+            </ul>
+            <button class="button-special" type="button" name="button">Purchase</button>
+          </div>
+          <div class="offer-item">
+            <h3>Golden Edition</h3>
+            <strong>89.99$</strong>
+            <ul>
+              <li>All DLC's included</li>
+              <li>+ An extra copy to play with your friend</li>
+            </ul>
+            <button class="button-special" type="button" name="button">Purchase</button>
           </div>
         </div>
       </section>
-      <section id="socials" class="socials">
-
+      <section tabindex="0" id="socials" class="socials">
+        <h2>Socials</h2>
+        <div class="socials-container">
+          <button class="button-image button-linkedin" type="button" name="button"></button>
+          <button class="button-image button-twitter" type="button" name="button"></button>
+          <button class="button-image button-github" type="button" name="button"></button>
+        </div>
       </section>
     </main>
   </body>
