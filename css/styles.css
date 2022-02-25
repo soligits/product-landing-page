@@ -7,9 +7,9 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 1.8rem;
   color: black;
   margin: 0;
 }
@@ -27,6 +27,9 @@ body::before {
   background-size: cover;
 }
 
+
+/* header */
+
 .header {
   position: fixed;
   top: 0;
@@ -37,7 +40,7 @@ body::before {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: stretch;
-  padding: 1.5rem 1rem;
+  padding: 0 1rem;
   background: linear-gradient(to right, hsl(26, 100%, 50%), hsl(26, 100%, 60%));
 }
 
@@ -45,13 +48,14 @@ body::before {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  padding: 0.6em 0;
   justify-content: space-between;
   align-content: stretch;
 }
 
 .header-icon {
-  width: 96px;
-  height: 96px;
+  width: 2.1em;
+  height: auto;
   border-radius: 50%;
   box-shadow: 1px 2px brown;
   margin: auto;
@@ -60,7 +64,7 @@ body::before {
 .title {
   font-family: 'Redressed', cursive;
   font-weight: 750;
-  font-size: 3.3rem;
+  font-size: 2.1em;
   margin: auto auto auto 2rem;
 }
 
@@ -72,46 +76,15 @@ body::before {
 }
 
 .nav-link {
-  margin: auto 1vw;
-  padding: 0.5rem;
+  padding: 0.6em 0.6em;
   border-radius: 4px;
   color: inherit;
   text-decoration: none;
-
-
-  animation-name: link-unhover-animation;
-  animation-duration: 0.25s;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  transition: background-color 0.3s ease-out;
 }
 
 .nav-link:hover {
-  animation-name: link-hover-animation;
-  animation-duration: 0.5s;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes link-hover-animation {
-  0% {
-    background-color: inherit;
-  }
-button-special
-  100% {
-    background-color: hsl(39, 100%, 30%);
-  }
-}
-
-@keyframes link-unhover-animation {
-  0% {
-    background-color: hsl(39, 100%, 30%);
-  }
-
-  100% {
-    background-color: inherit;
-  }
+  background-color: hsl(39, 100%, 30%);
 }
 
 .vertical-flex {
@@ -120,9 +93,12 @@ button-special
   flex-basis: auto;
 }
 
+/* main */
+
+
 .container {
   position: relative;
-  top: 6rem;
+  top: 1.7em;
   z-index: 0;
   width: 800px;
   height: auto;
@@ -164,69 +140,18 @@ button-special
   border-radius: 4px;
   background-color: green;
   color: white;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, transform 0.3s ease-out;
+}
 
+.button-special:hover {
+  cursor: pointer;
+  color: black;
+  background-color: orange;
+  transform: scale(1.2);
 }
 
 .video-youtube {
   margin: 2rem auto;
-}
-
-@media (max-width:1000px) {
-  .nav-bar {
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav-link {
-    margin-bottom: 0.2rem;
-  }
-
-  .header {
-    padding: 0.3rem;
-  }
-
-  .icon-container {
-    margin: 0.2rem 1rem;
-  }
-
-  .container {
-    top: 10.3rem;
-    padding: 2rem 0;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .video-youtube {
-    width: 100%;
-  }
-}
-
-@media (max-width: 450px) {
-  .header {
-    flex-direction: column;
-    margin: auto;
-  }
-
-  .container {
-    top: 16.3rem;
-    padding: 2rem 0;
-  }
-
-  .icon-container {
-    flex-direction: column;
-    margin: 1rem auto;
-  }
-
-  .header-icon {
-      margin-bottom: 0;
-      visibility: hidden;
-      width: 0;
-      height: 0;
-  }
-
-  .nav-bar {
-    margin: 1rem auto;
-  }
 }
 
 p {
@@ -266,34 +191,13 @@ p::before {
   border: none;
   background-color: transparent;
   background-size: cover;
-  opacity: 0.6;
-  animation-name: button-image-unhover-animation;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-out
 }
 
 .button-image:hover {
-  animation-name: button-image-hover-animation;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-
-@keyframes button-image-hover-animation {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes button-image-unhover-animation {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.6;
-  }
+  opacity: 1;
+  cursor: pointer;
 }
 
 .button-linkedin {
@@ -306,4 +210,69 @@ p::before {
 
 .button-github {
   background-image: url("../img/icon-github.png");
+}
+
+
+
+/* media quieries */
+
+
+@media (max-width:1023px) {
+  .nav-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-link {
+    margin-bottom: 0.2rem;
+    padding: 0;
+  }
+
+  .header {
+    padding: 0.1em;
+  }
+
+  .icon-container {
+    margin: 0.1em;
+  }
+
+  .container {
+    top: 5.6em;
+    padding: 2rem 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .video-youtube {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .container {
+    top: 8.8em;
+    padding: 2rem 0;
+  }
+
+  .icon-container {
+    flex-direction: column;
+    margin: 0.3em auto;
+  }
+
+  .header-icon {
+      margin-bottom: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+  }
+
+  .nav-bar {
+    margin: 0.3em auto;
+  }
 }
